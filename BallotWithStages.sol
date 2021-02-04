@@ -9,7 +9,7 @@ contract Ballot {
     struct Proposal {
         uint voteCount;
     }
-    enum Stage {Init,Reg, Vote, Done}
+    enum Stage {Init, Reg, Vote, Done}
     Stage public stage = Stage.Init;
     
     address chairperson;
@@ -24,7 +24,7 @@ contract Ballot {
         chairperson = msg.sender;
         voters[chairperson].weight = 2; // weight is 2 for testing purposes
         proposals.length = _numProposals;
-        stage = Stage.Reg;
+        stage = Stage.Reg; // initiates the registration stage (stage is now in registration)
         startTime = now;
     }
 

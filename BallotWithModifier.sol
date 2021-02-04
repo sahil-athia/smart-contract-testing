@@ -22,6 +22,7 @@ contract Ballot {
     uint startTime;
     //modifiers
     modifier validStage(Stage reqStage)
+    // the use of this modifier can be seen in the function headars with the approprate paramaters
     { require(stage == reqStage);
       _;
     }

@@ -26,5 +26,6 @@ contract Coin {
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
+        // here we log the event
     }
 }
